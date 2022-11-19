@@ -1,38 +1,304 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+
+:root{
+  --main-bg-color: #101111;
+  --grey-blue: #2C3E4F;
+  --grey: #979797;
+}
+
+/* reset default */
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: var(--main-bg-color);
+  font-family: "League Spartan";
+}
+
+a {
+  text-decoration: none;
+}
+
+/* reset button default */
+
+button {
+  border : none;
+  cursor: pointer;
+}
+
+/* NAVBAR */
+
+.navbar {
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 22px;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.navbar .nav-links ul li {
+  margin: 0 25px;
+}
+
+.navbar-btn {
+  background: var(--grey-blue);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+.navbar .navbar-icon {
+  display: none;
+  position: absolute;
+  top: 37px;
+  right: 0;
+  width: 65px;
+  z-index: 12;
+}
+
+/* HERO BANNER */
+
+.hero-title {
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  margin: 20px;
+  margin-top: 150px;
+}
+
+.hero-p {
+  text-align: center;
+  font-size: 19px;
+  padding: 10px;
+  color: var(--grey);
+}
+
+/* MINT BUTTON */
+
+.mint-btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  font-size: 30px;
+  color: #fff;
+  background-color: var(--grey-blue);
+  padding: 15px 50px;
+  border-radius: 25px;
+  transition: 1s;
+}
+
+.mint-btn:hover {
+  scale: 1.2;
+  transition: 1s;
+}
+
+/* ARROW DOWN */
+
+.arrowDown {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  animation: upDown 1s infinite  alternate;
+}
+
+@keyframes upDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+/* NFTCARD */
+
+.nftcard-img {
+  max-width: 100%;
+  max-height: auto;
+  border-radius: 25px;
+}
+
+/* NFT SLIDER */
+
+.nftslider-box {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 10px;
+}
+
+/* FEATURED IN */
+
+.featured-box {
+  background-color: #181a1a;
+  max-width: 890px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.featured-title {
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+  color: #fff;
+}
+
+.featured-media {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.featured-media p {
+  font-size: 30px;
+  margin: 10px 20px;
+  color: var(--grey);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* NFT BG VIEW */
+
+.nftbgview-box {
+  max-width: 990px;
+  margin: 50px auto;
+}
+
+.nftbgview-option > button {
+  width: 250px;
+  display: block;
+  margin: 20px auto;
+  background-color: var(--grey-blue);
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 60px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.nftbgview-option > button:focus {
+  background-color: #070B0F;
+  transition: 0.5s;
+}
+
+.nftbgview-box img {
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+
+@media (min-width: 640px) {
+
+  /* HERO BANNER */
+  
+  .hero-title {
+    font-size: 80px;
+    margin-top: 150px;
+  }
+
+  .hero-p {
+    font-size: 30px;
+    margin-top: -30px;
+  }
+
+  /* ARROW DOWN */
+
+  .arrowDown {
+    width: 120px;
+  }
+
+  /* FEATURED MEDIA */
+
+  .featured-media {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* NFT BG VIEW */
+
+  .nftbgview-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nftbgview-option {
+    margin: auto auto;
+  }
+
+  .nftbgview-option > button{
+    width: 300px;
+    font-size: 25px;
+    padding: 25px 60px;
+  }
+
+  .nftbgview-box div:nth-child(1){
+    order: 2;
+  }
+  .nftbgview-box div:nth-child(2){
+    order: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    z-index: 10;
+    margin-left: -100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mobile-menu {
+    margin: 0;
   }
+
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar .navbar-icon {
+    display: block;
+    z-index: 11;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .nav-links ul li {
+    margin: 25px 0;
+    font-size: 1.2rem;
+  }
+
+  .navbar .navbar-logo {
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 11;
+  }
+
 }
