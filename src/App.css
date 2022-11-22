@@ -263,6 +263,18 @@ button {
   margin-top: 60px;
 }
 
+/* FOOTER */
+
+.footer-title {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer-github {
+  color: #65A6E4;
+}
+
 
 @media (min-width: 640px) {
 

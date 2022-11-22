@@ -6,8 +6,19 @@ import MintButton from '../../components/MintButton';
 import NftSlider from '../../components/NftSlider';
 import NftBgView from '../../components/NftBgView';
 import Faq from '../../components/Faq';
+import { ReactElement } from 'react';
 
 function Home() {
+
+  const Footer = ():ReactElement => {
+    return (
+      <p className='footer-title'>
+        Catpunks minting website example, 
+        <a href='https://github.com/GenesisBlock2140/nft-mint-website' target='_blank' className='footer-github' rel="noreferrer" > Github by GenesisBlock2140</a>
+      </p>
+    )
+  }
+
   return (
     <div>
       <Navbar />
@@ -32,6 +43,7 @@ function Home() {
         <p className='exclu-desc'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
       </div>
       <Faq />
+      <Footer />
     </div>
   );
 }
